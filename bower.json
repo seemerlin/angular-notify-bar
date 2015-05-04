@@ -1,17 +1,17 @@
 {
-  "name": "angularjs-modal-service",
+  "name": "angular-notify-bar",
   "version": "0.0.1",
-  "main": "src/createDialog.js",
+  "main": "src/angular-notify-bar.js",
   "ignore": [
     "**/.*",
     ".DS_Store",
     "node_modules",
     "components"
   ],
-  "description": "An AngularJS service that creates a Modal Popup with a given HTML template and controller",
+  "description": "An AngularJS service that creates a HTML notification bar",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Fundoo-Solutions/angularjs-modal-service.git"
+    "url": "git@github.com:seemerlin/angular-notify-bar.git"
   },
 
   "license": "MIT"
