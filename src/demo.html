@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Notify Bar Demo</title>
+    <script type="text/javascript">
+      if(!window.console) {
+        console={};
+        console.log = function(){};
+        console.debug = function(){};
+        console.error = function(){};
+        console.info = function(){};
+      }
+    </script>
+    <link href="styles.css" rel="stylesheet">
+  </head>  
+    <base href="/">
+    <body ng-app="app" style="background-color: #eee; font-size:18px">
+      
+    <div ng-controller="MainCtrl"> 
+      <h1>Hello World</h1>
+      
+      <button ng-click="notifyWithTimeout()">Notify with 6 sec. timeout</button><br/>
+      <button ng-click="notifyWithoutTimeout()">Notify without timeout</button><br/>
+      <button ng-click="notifyWithBlack()">Notify without blackout</button><br/>
+        
+    </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+    <script src="angular-notify-bar.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
