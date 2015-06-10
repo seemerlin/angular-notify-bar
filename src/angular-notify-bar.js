@@ -49,8 +49,8 @@ angular.module('angular-notify-bar', []).factory('NotifyBar', ["$document", "$co
       //We don't have the scope we're gonna use yet, so just get a compile function for modal
       var modalEl = angular.element(
                 '<div class="' + options.modalClass + '"' + idAttr + '>' +
-                    '  <div class="modal-dialog" ng-click="$modalClose()">' +
-                    '    <div class="modal-content">' +
+                    '  <div class="' + options.modalClass + '-dialog" ng-click="$modalClose()">' +
+                    '    <div class="' + options.modalClass + '-content">' +
                     '        <button type="button" class="close" ng-click="$modalClose()">&times;</button>' +
                               modalBody + options.message +
                     '    </div>' +
