@@ -6,7 +6,7 @@ angular.module('angular-notify-bar', []).factory('NotifyBar', ["$document", "$co
       templateUrl: null,
       backdrop: true,
       controller: null, //just like route controller declaration
-      backdropClass: "modal-backdrop",
+      backdropClass: "-backdrop",
       backdropCancel: true,
       modalClass: "modal",
       timeout: 5,
@@ -36,14 +36,14 @@ angular.module('angular-notify-bar', []).factory('NotifyBar', ["$document", "$co
         if(options.template){
           if(angular.isString(options.template)){
             // Simple string template
-            return '<div class="modal-body">' + options.template + '</div>';
+            return '<div class="' + options.modalClass + '-body">' + options.template + '</div>';
           } else {
             // jQuery/JQlite wrapped object
-            return '<div class="modal-body">' + options.template.html() + '</div>';
+            return '<div class="' + options.modalClass + '-body">' + options.template.html() + '</div>';
           }
         } else {
           // Template url
-          return '<div class="modal-body" ng-include="\'' + options.templateUrl + '\'"></div>'
+          return '<div class="' + options.modalClass + '-body" ng-include="\'' + options.templateUrl + '\'"></div>'
         }
       })();
       //We don't have the scope we're gonna use yet, so just get a compile function for modal
@@ -63,7 +63,7 @@ angular.module('angular-notify-bar', []).factory('NotifyBar', ["$document", "$co
       }
       divHTML+=">";
       var backdropEl = angular.element(divHTML);
-      backdropEl.addClass(options.backdropClass);
+      backdropEl.addClass(options.modalClass + options.backdropClass);
 
       var handleEscPressed = function (event) {
         if (event.keyCode === 27) {
@@ -92,7 +92,7 @@ angular.module('angular-notify-bar', []).factory('NotifyBar', ["$document", "$co
         scope = options.scope || $rootScope.$new();
 
       scope.$modalClose = closeFn;
-      
+
       if (options.controller) {
         locals = angular.extend({$scope: scope}, passedInLocals);
         ctrl = $controller(options.controller, locals);
