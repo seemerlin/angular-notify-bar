@@ -1,0 +1,10 @@
+{
+  "name": "@seemerlin/angular-notify-bar",
+  "main": "src/angular-notify-bar.js",
+  "version": "0.0.1",
+  "description": "A notification service for angular.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seemerlin/angular-notify-bar.git"
+  }
+}
