@@ -1,5 +1,5 @@
 {
-  "name": "@seemerlin/angular-notify-bar",
+  "name": "angular-notify-bar",
   "main": "src/angular-notify-bar.js",
   "version": "0.0.1",
   "description": "A notification service for angular.",
